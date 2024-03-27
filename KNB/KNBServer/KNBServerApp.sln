@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KNBServer", "KNBServer\KNBServer.csproj", "{1882A363-13B9-460D-A2DF-8166345A26FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KNBClient", "KNBClient\KNBClient.csproj", "{7D3A28F6-34EB-477A-B3B2-9ACA45C97F46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1882A363-13B9-460D-A2DF-8166345A26FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1882A363-13B9-460D-A2DF-8166345A26FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1882A363-13B9-460D-A2DF-8166345A26FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1882A363-13B9-460D-A2DF-8166345A26FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D3A28F6-34EB-477A-B3B2-9ACA45C97F46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D3A28F6-34EB-477A-B3B2-9ACA45C97F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D3A28F6-34EB-477A-B3B2-9ACA45C97F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D3A28F6-34EB-477A-B3B2-9ACA45C97F46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D489900-207D-4185-9D81-55B8A5D9FB3C}
+	EndGlobalSection
+EndGlobal
