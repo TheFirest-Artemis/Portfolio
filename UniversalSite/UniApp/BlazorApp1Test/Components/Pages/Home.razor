@@ -1,0 +1,39 @@
+﻿@page "/"
+@page "/index"
+@page "/home"
+@using System.Net.Http.Headers;
+
+@attribute [StreamRendering]
+@rendermode InteractiveServer
+@inject IHttpClientFactory ClientFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Home</PageTitle>
+
+<button class="btn btn-primary" @onclick="Search">Click me</button>
+<h2>@x</h2>
+
+@code{
+	private string x = "";
+
+	public async Task Search()
+	{
+		HttpClient client = ClientFactory.CreateClient();
+		var request = new HttpRequestMessage
+		{
+			Method = HttpMethod.Get,
+			RequestUri = new Uri("https://google-search72.p.rapidapi.com/search?q=word%20cup&gl=us&lr=lang_en&num=7&start=0"),
+			Headers =
+			{
+			{ "X-RapidAPI-Key", "34dc03b0d9mshe91796e3d56bb5cp1c2641jsn3d942407f37b" },
+			{ "X-RapidAPI-Host", "google-search72.p.rapidapi.com" },
+			},
+		};
+		using (var response = await client.SendAsync(request))
+		{
+			response.EnsureSuccessStatusCode();
+			var body = await response.Content.ReadAsStringAsync();
+			x = body;
+		}
+	}
+}

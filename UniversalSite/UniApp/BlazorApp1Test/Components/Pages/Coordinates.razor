@@ -1,0 +1,78 @@
+﻿@page "/coordinates"
+@using System.Net
+@using System.Text.Json;
+@using Yandex;
+@attribute [StreamRendering]
+@rendermode InteractiveServer
+@inject IHttpClientFactory ClientFactory
+@inject NavigationManager NavigationManager
+<PageTitle>Coordinates</PageTitle>
+
+
+<div style="/* position: absolute; top: 35%; left: 50%; margin: -125px 0 0 -125px; */">
+<a>Введите место: <input type="text" @bind="place"/> <button class="btn btn-primary" @onclick="Search">Click me</button></a>
+<br />
+@if (ex != "")
+{
+    <p><em><h5>@ex</h5></em></p>
+}
+else if (lat != null)
+{
+    <a>Широта: @lat Долгота: @lon</a>
+}
+else
+{
+    <p><em>Ожидание...</em></p>
+}
+</div>
+
+@code {
+    private string place = "";
+    private string line;
+    private string lat;
+    private string lon;
+    private string ex = "";
+
+    private async Task Search()
+    {
+        if (place != "")
+        {
+            HttpClient httpClient = ClientFactory.CreateClient();
+            var response = await httpClient.GetAsync($"{NavigationManager.BaseUri}weathercoord?place={place}");
+            string getPlace = await response.Content.ReadAsStringAsync();
+            if (getPlace != "не найдено")
+            {
+                lat = getPlace.Split()[1];
+                lon = getPlace.Split()[0];
+                ex = "";
+            }
+            else
+            {
+                ex = getPlace;
+            }
+            /*WebRequest request = WebRequest.Create($"https://geocode-maps.yandex.ru/1.x/?apikey=f86e21d4-d60c-4f96-b1f6-03c0639a82ee&geocode={place}");
+            WebResponse response = request.GetResponse();
+            using (Stream stream = response.GetResponseStream())
+            {
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    line = reader.ReadToEnd();
+
+                    try
+                    {
+                        string words = (line.Split("<pos>")[1]).Split("</pos>")[0];
+                        lat = words.Split()[1];
+                        lon = words.Split()[0];
+                    }
+                    catch (Exception ex)
+                    {
+                        lat = "не найдено";
+                        lon = "не найдено";
+                        throw;
+                    }
+                    
+                }
+            }*/        }
+    }
+
+}

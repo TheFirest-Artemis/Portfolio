@@ -1,0 +1,75 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">UniApp</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="weather">
+                <span aria-hidden="true"></span><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="bi bi-cloud-haze2-fill" fill="white" fill-rule="evenodd">
+                        <g class="layer">
+                            <title>Layer 1</title>
+                            <path d="m8.5,2a5,5 0 0 1 4.91,4.03a3,3 0 0 1 -0.41,5.97l-9.5,0a3.5,3.5 0 0 1 -3.46,-3l5.46,0a0.5,0.5 0 0 0 0,-1l-5.46,0a3.5,3.5 0 0 1 3.87,-2.98a5,5 0 0 1 4.59,-3.02m-6,8a0.5,0.5 0 0 0 0,1l9,0a0.5,0.5 0 0 0 0,-1l-9,0zm-2.5,3.5a0.5,0.5 0 0 1 0.5,-0.5l9,0a0.5,0.5 0 0 1 0,1l-9,0a0.5,0.5 0 0 1 -0.5,-0.5" id="svg_1" />
+                        </g>
+                    </svg> Weather
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="coordinates">
+                <span aria-hidden="true"></span><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="bi bi-compass-fill" fill="white">
+                    <g class="layer">
+                        <title>Layer 1</title>
+                        <path d="m15.5,8.52a7.5,7.5 0 1 1 -9.46,-7.24a1,1 0 0 1 0.96,-1.28l2,0a1,1 0 0 1 0.96,1.28a7.5,7.5 0 0 1 5.54,7.24m-3.61,-3.91l-4.95,2.83l-2.83,4.95l4.95,-2.83l2.83,-4.95z" id="svg_1" />
+                    </g>
+                </svg> Coordinates
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="currency">
+                <span aria-hidden="true"></span><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="bi bi-coin" fill="white">
+                    <g class="layer">
+                        <title>Layer 1</title>
+                        <path d="m5.5,9.51c0.08,0.95 0.83,1.7 2.18,1.79l0,0.7l0.6,0l0,-0.71c1.4,-0.1 2.22,-0.84 2.22,-1.93c0,-0.99 -0.63,-1.5 -1.75,-1.76l-0.47,-0.11l0,-1.92c0.6,0.07 0.98,0.4 1.08,0.85l1.05,0c-0.08,-0.92 -0.87,-1.64 -2.13,-1.72l0,-0.7l-0.6,0l0,0.72c-1.19,0.12 -2.01,0.84 -2.01,1.85c0,0.9 0.61,1.47 1.61,1.71l0.4,0.1l0,2.03c-0.61,-0.09 -1.02,-0.43 -1.11,-0.9l-1.07,0zm2.18,-2.17c-0.59,-0.13 -0.91,-0.41 -0.91,-0.83c0,-0.47 0.34,-0.82 0.91,-0.93l0,1.76l0,0zm0.69,1.2c0.72,0.16 1.05,0.43 1.05,0.91c0,0.54 -0.42,0.91 -1.14,0.98l0,-1.91l0.09,0.02z" id="svg_1" />
+                        <path d="m8,15a7,7 0 1 1 0,-14a7,7 0 0 1 0,14m0,1a8,8 0 1 0 0,-16a8,8 0 0 0 0,16" id="svg_2" />
+                        <path d="m8,13.5a5.5,5.5 0 1 1 0,-11a5.5,5.5 0 0 1 0,11m0,0.5a6,6 0 1 0 0,-12a6,6 0 0 0 0,12" id="svg_3" />
+                    </g>
+                </svg> Currency
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="map">
+                <span aria-hidden="true"></span><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="bi bi-geo-alt-fill" fill="white">
+                    <g class="layer">
+                        <title>Layer 1</title>
+                        <path d="m8,16s6,-5.69 6,-10a6,6 0 0 0 -12,0c0,4.31 6,10 6,10m0,-7a3,3 0 1 1 0,-6a3,3 0 0 1 0,6" id="svg_1" />
+                    </g>
+                </svg> Map
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="qrgenerator">
+                <span aria-hidden="true"></span>
+                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="bi bi-geo-alt-fill" fill="white">
+                    <g class="layer">
+                        <title>Layer 1</title>
+                        <path d="m8,16s6,-5.69 6,-10a6,6 0 0 0 -12,0c0,4.31 6,10 6,10m0,-7a3,3 0 1 1 0,-6a3,3 0 0 1 0,6" id="svg_1" />
+                    </g>
+                </svg> QRGenerator
+            </NavLink>
+        </div>
+    </nav>
+</div>
+

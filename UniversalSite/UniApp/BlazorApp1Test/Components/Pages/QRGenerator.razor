@@ -1,0 +1,35 @@
+﻿@page "/qrgenerator"
+@using System.Net
+@using System.Text.Json;
+@using Microsoft.AspNetCore.Components.Web
+@using System.Net.Http.Headers;
+@using RestSharp;
+
+@attribute [StreamRendering]
+@rendermode InteractiveServer
+@inject IHttpClientFactory ClientFactory
+@inject NavigationManager NavigationManager
+
+<button class="btn btn-primary" @onclick="Generator">Click me</button>
+
+<img src="" width="200px"/>
+
+@((MarkupString)x)
+
+@code {
+	private string x = "";
+
+	public async Task Generator()
+	{
+		string y = "";
+		var client = new RestClient("https://qr-code-generator20.p.rapidapi.com/generatebasicimage?data=1234");
+		var request = new RestRequest(Method.GET);
+		request.AddHeader("X-RapidAPI-Key", "34dc03b0d9mshe91796e3d56bb5cp1c2641jsn3d942407f37b");
+		request.AddHeader("X-RapidAPI-Host", "qr-code-generator20.p.rapidapi.com");
+		IRestResponse response = client.Execute(request);
+		y = response.Content.ToString();
+		string dop = " width=\"200px\">";
+		x = y.Remove(y.Length - 1);
+		x = x + dop;
+	}
+}
