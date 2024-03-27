@@ -1,0 +1,52 @@
+﻿@page
+@model GameSIteV01.Pages.UserAccountModel
+
+@{
+    ViewData["Title"] = "UserAccount";
+}
+
+<html>
+    <body style="background-color:#1c1c1c;">
+        <div style="display:flex; justify-content:center;">
+        <div style="max-width:270px;">
+            <ul style="list-style:none;">
+                <li style="display:inline;">
+                    <h1 style="font-weight:bold; color:darkmagenta">@Html.DisplayFor(model => model.UserModel.UserName)</h1>
+                </li>
+                <li style="display:inline;">
+                    <h1 class="text-white">Время в игре:</h1>
+                    <h1 style="font-weight:bold; color:darkmagenta">@Html.DisplayFor(model => model.UserModel.TimeInGame)</h1>
+                </li>
+                <li style="display:inline;">
+                    <h1 class="text-white">С нами с:</h1>
+                    <h1 style="font-weight:bold; color:darkmagenta">@Html.DisplayFor(model => model.UserModel.RegistrationDate.ToString().Split()[0])</h1>
+                </li>
+            </ul>
+        </div>
+        </div>
+@*<div>
+    <h4>UserModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserModel.UserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserModel.UserName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserModel.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserModel.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserModel.Password)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserModel.Password)
+        </dd>
+    </dl>
+</div>*@
+</body>
+</html>

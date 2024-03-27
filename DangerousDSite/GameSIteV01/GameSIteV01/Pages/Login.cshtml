@@ -1,0 +1,28 @@
+﻿@page
+@model GameSIteV01.Pages.Account.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<html>
+    <body style="background-color:#1c1c1c;">
+<div style="display: flex;
+  justify-content: center;">
+    <div>
+        <h1 style="text-align:center; color:darkmagenta;"><b>Вход</b></h1>
+        <form method='post'>
+            <p>
+                <h6 style="font-size:x-large; text-align:center;" class="text-white">Email/Никнейм</h6>
+                <input name='email/username' style="width:200px; height:40px; font-size:large;"/>
+            </p>
+            <p>
+                <h6 class="text-white" style="font-size:x-large; text-align:center;">Пароль</h6>
+                <input type='password' name='password'  style="width:200px; height:40px; font-size:large;"/>
+            </p>
+            <input type='submit' value='Войти' class="btn" style="width:200px; font-weight:bold; background-color:darkmagenta; color:white;"/>
+        </form>
+        </div>
+</div>
+</body>
+</html>
